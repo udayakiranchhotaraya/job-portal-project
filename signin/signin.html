@@ -12,11 +12,13 @@
 </head>
 <body>
     <div class="container">
+        <div id="dotted-background"></div>
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Welcome back!</h2>
-                <p>Hey, enter the details to sign into your account</p>
-                <form action="#" method="post" id="signin-form">
+                <p style="text-align: center; margin-bottom: 0%;">Hey, enter the details to sign into your account.</p>
+                <p style="font-size: small; text-align: center; margin-top: 1%;">By continuing, you agree to our <span style="color: #0CAA41; text-decoration: underline;">Terms of Use</span> and <span style="color: #0CAA41; text-decoration: underline;">Privacy Policy</span> .</p>
+                <form method="post" id="signin-form">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" id="email" name="Email" required>
@@ -30,7 +32,7 @@
                 <div class="form-group">
                     <button type="submit">Continue with Email</button>
                 </div>
-        </form>
+                </form>
             </div>
         </div>
     </div>
