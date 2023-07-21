@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <div class="steps">
+      <button class="step-btn active" onclick="showStep(1)">Step 1</button>
+      <button class="step-btn" onclick="showStep(2)">Step 2</button>
+      <button class="step-btn" onclick="showStep(3)">Step 3</button>
+    </div>
+    <div id="step-1" class="step-page">
+      <!-- Step 1 content -->
+      <label for="email"><b>Email Id:</b></label>
+      <input type="email" id="email" placeholder="Enter your email id">
+      <br><br>
+      <label for="password"><b>Password:</b></label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <br><br>
+      <button onclick="nextStep(2)">Next</button>
+    </div>
+    <div id="step-2" class="step-page">
+      <!-- Step 2 content -->
+      <label for="name"><b>Name:</b></label>
+      <input type="text" id="name" placeholder="Enter your full name">
+      <br><br>
+      <button onclick="nextStep(3)">Next</button>
+    </div>
+    <div id="step-3" class="step-page">
+      <!-- Step 3 content -->
+      <label for="dob"><b>DOB:</b></label>
+      <input type="date" id="dob" placeholder="Enter your date of birth">
+      <br><br>
+      <button onclick="submitForm()">Submit</button>
+    </div>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>
