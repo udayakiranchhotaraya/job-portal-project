@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employers-signup</title>
+</head>
+<body>
+    <div id="signup-form">
+            <h1>Employer Sign up</h1>
+        <form id="employer-form">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+            <br><br><br>
+            <label for="company">Company:</label>
+            <br>
+            <input type="text" id="company" name="company" required>
+            <br><br><br>
+             <label for="jobtitle">Official Job Title:</label>
+             <input type="text" id="jobtitle" name="jobtitle" required>
+             <label for="number"># of open jobs</label>
+              <select id="number" name="number">
+               <option value="none"></option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6-10</option>
+               <option value="7">10-15</option>
+               <option value="8">15-20</option>
+               <option value="no">No open Jobs</option>
+               </select>
+             <br><br><br>
+             <label for="Email">Work Email Address:</label><br>
+             <input type="email" id="Email" name="Email" required>
+             <br><br><br>
+             <label for="password">Password:</label><br>
+             <input type="password" id="password" name="password" required>
+             <br><br><br>
+             <input type="checkbox"required>I confirm i represent HR,recruiting,Marketing,PR, or am an executive<br>
+                 at my company and i agree to Job portal's <u><b>Terms of Service</b></u> and <u><b>Privacy Policy</b></u> on<br>
+                behalf of my company
+                <br><br><br>
+            <button type="submit">Create Account</button><br><br>
+            Already have an account?<a href="signin.html">Sign in</a>
+        </form>
+    </div>
+    <script src="employers-signup.js"></script>
+</body>
+</html>
