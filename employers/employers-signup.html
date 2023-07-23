@@ -4,50 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employers-signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./employers-signup.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div id="signup-form">
-            <h1>Employer Sign up</h1>
-        <form id="employer-form">
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" required>
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" required>
-            <br><br><br>
-            <label for="company">Company:</label>
-            <br>
-            <input type="text" id="company" name="company" required>
-            <br><br><br>
-             <label for="jobtitle">Official Job Title:</label>
-             <input type="text" id="jobtitle" name="jobtitle" required>
-             <label for="number"># of open jobs</label>
-              <select id="number" name="number">
-               <option value="none"></option>
-               <option value="1">1</option>
-               <option value="2">2</option>
-               <option value="3">3</option>
-               <option value="4">4</option>
-               <option value="5">5</option>
-               <option value="6">6-10</option>
-               <option value="7">10-15</option>
-               <option value="8">15-20</option>
-               <option value="no">No open Jobs</option>
-               </select>
-             <br><br><br>
-             <label for="Email">Work Email Address:</label><br>
-             <input type="email" id="Email" name="Email" required>
-             <br><br><br>
-             <label for="password">Password:</label><br>
-             <input type="password" id="password" name="password" required>
-             <br><br><br>
-             <input type="checkbox"required>I confirm i represent HR,recruiting,Marketing,PR, or am an executive<br>
-                 at my company and i agree to Job portal's <u><b>Terms of Service</b></u> and <u><b>Privacy Policy</b></u> on<br>
-                behalf of my company
-                <br><br><br>
-            <button type="submit">Create Account</button><br><br>
-            Already have an account?<a href="signin.html">Sign in</a>
-        </form>
+    <h1 class="card-title" style="color: #0CAA41;">Take the first step in telling your story.</h1>
+    <div class="container-form">
+        <div id="dotted-background"></div>
+        <div class="card">
+            <div class="card-body">
+                <p style="font-size: large; text-align: center; margin-bottom: 0%;">Claim Your Free Employer's Profile.</p>
+                <p style="font-size: small; text-align: center; margin-top: 1%;">By continuing, you agree to our <span style="color: #0CAA41; text-decoration: underline;">Terms of Use</span> and <span style="color: #0CAA41; text-decoration: underline;">Privacy Policy</span> .</p>
+                <form method="post" id="employer-signup-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" required>
+                    <p></p>
+                </div>
+                <!-- <div class="form-group grid">
+                    <div class="grid-item" style="width: 70%;">
+                        <label for="jobtitle">Official Job Title</label>
+                        <input type="text" id="jobtitle" name="jobtitle" required>
+                    </div>
+                    <div class="grid-item" style="width: 40%;">
+                        <label for="numberOfJobs"># of open jobs</label>
+                        <select id="numberOfJobs" name="numberOfJobs">
+                            <option value="none"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6-10</option>
+                            <option value="7">10-15</option>
+                            <option value="8">15-20</option>
+                            <option value="no">No open Jobs</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="form-group">
+                    <label for="email">Work Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <p></p>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" required> <span id="form-checkbox-text">I confirm I represent HR, Recruiting, Marketing, PR, or am an executive at my company and I agree to Job-Portal's <span style="color: #0CAA41; text-decoration: underline;">Terms of Use</span> and <span style="color: #0CAA41; text-decoration: underline;">Privacy Policy</span> on behalf of my company.</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Create Account</button>
+                </div>
+                <div style="text-align: center; padding-top: 10px;">Already have an account? <a href="../employers/employers-signin.html">Sign in</a></div>
+            </div>
+        </div>
     </div>
+
     <script src="employers-signup.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+{
+    "users": [
+        {
+            "email": "john.doe@mail.com",
+            "password": "john.pwd"
+        }
+    ],
+    "employers": []
+}
