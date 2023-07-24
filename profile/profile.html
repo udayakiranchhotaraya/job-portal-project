@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openprofile(event, 'details')" id="defaultOpen">Update Details</button>
+        <button class="tablinks" onclick="openprofile(event, 'Basic')" >Basic Details</button>
+        <button class="tablinks" onclick="openprofile(event, 'Qualification')">Qualification</button>
+        <button class="tablinks" onclick="openprofile(event, 'Job')">Job Applied</button>
+        <button class="tablinks" onclick="openprofile(event, 'Resume')">Resume</button>
+        
+    </div>
+
+    <div id="Basic" class="tabcontent">
+
+    </div>
+    <div id="Qualification" class="tabcontent">
+        
+    </div>
+
+    <div id="Job" class="tabcontent">
+        <h3>Job Applied</h3>
+    </div>
+    <div id="Resume" class="tabcontent">
+        <h3>Resume</h3>
+        
+    </div>
+
+    <div id="details" class="tabcontent">
+        <h3>Update profile</h3>
+        <form id="profile">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" /><br><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your Email id" /><br><br><br>
+
+            <label for="gender-select">Gender:</label>
+             <select id="gender-select" name="gender">
+                <option value="none">Choose Gender</option> 
+              <option value="Male">Male</option>
+              <option value="Memale">Female</option>
+             </select><br><br><br>
+
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" id="dob" /><br><br><br>
+
+            <label for="father">Father's Name:</label>
+            <input type="text" id="father" placeholder="Enter your Father's name" /><br><br><br>
+
+            <label for="mother">Mother's Name:</label>
+            <input type="text" id="mother" placeholder="Enter your Mother's name" /><br><br><br>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" placeholder="Enter your place" /><br><br><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" placeholder="Enter your state" /><br><br><br>
+
+            <p><b>Matriculation:</b></p>
+
+            <label for="board">Board:</label>
+            <input type="text" id="board" placeholder="Enter your Board" /><br><br><br>
+            <label for="institute">Institute Name:</label>
+            <input type="text" id="institute" placeholder="Enter your institute name" /><br><br><br>
+            <label for="year">Year of Passing:</label>
+            <input type="number" id="year" placeholder="year of passing" /><br><br><br>
+            <label for="marks">Percentage:</label>
+            <input type="number" id="marks" name="marks" step="0.01" min="0" placeholder="Enter your percentage"/><br><br><br>
+
+            <p><b>Intermediate:</b></p>
+
+            <label for="Inter-board">Board:</label>
+            <input type="text" id="Inter-board" placeholder="Enter your Board" /><br><br><br>
+            <label for="Inter-institute">Institute Name:</label>
+            <input type="text" id="Inter-institute" placeholder="Enter your institute name" /><br><br><br>
+            <label for="Inter-year">Year of Passing:</label>
+            <input type="number" id="Inter-year" placeholder="year of passing" /><br><br><br>
+            <label for="Inter-marks">Percentage:</label>
+            <input type="number" id="Inter-marks" name="Inter-marks" step="0.01" min="0" placeholder="Enter your percentage"/><br><br><br>
+            
+            <p><b>Graduation:</b></p>
+
+            <label for="college">Institute Name:</label>
+            <input type="text" id="college" placeholder="Enter your institute name" /><br><br><br>
+            <label for="grad-year">Year of Graduation:</label>
+            <input type="number" id="grad-year" placeholder="year of Graduation" /><br><br><br>
+            <label for="cgpa">CGPA:</label>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" placeholder="Enter your CGPA"/><br><br><br>
+            
+            <button type="submit">Update</button>
+            <br><br><br>
+          </form>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
