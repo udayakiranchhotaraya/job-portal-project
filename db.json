@@ -1,9 +1,25 @@
 {
-    "users": [
-        {
-            "email": "john.doe@mail.com",
-            "password": "john.pwd"
-        }
-    ],
-    "employers": []
+  "users": [
+    {
+      "id": 1,
+      "email": "john.doe@mail.com",
+      "password": "john.pwd"
+    },
+    {
+      "email": "jane.doe@mail.com",
+      "password": "jane.pwd",
+      "id": 2
+    },
+    {
+      "email": "jack.doe@mail.com",
+      "password": "jack.pwd",
+      "id": 3
+    },
+    {
+      "email": "jill.doe@mail.com",
+      "password": "jill.pwd",
+      "id": 4
+    }
+  ],
+  "employers": []
 }
