@@ -87,7 +87,7 @@ nav a:hover img {
     font-size: 16px;
 }
 
-/* .form-group button {
+.form-group button {
     width: 84%;
     margin: 10px auto;
     padding: 7px;
@@ -103,7 +103,7 @@ nav a:hover img {
     border: 1px solid #0CAA41;
     color: white;
     transition: background-color 500ms;
-} */
+}
 
 #signin-with-google:hover {
     background-color: white;

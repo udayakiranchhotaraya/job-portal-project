@@ -196,3 +196,14 @@ body {
     color: white;
     background-color: black;
 }
+
+.go-back-to-email {
+    color: #0CAA41; 
+    text-decoration: underline;
+    font-size: small;
+    text-align: center;
+}
+
+.go-back-to-email:hover {
+    cursor: pointer;
+}
