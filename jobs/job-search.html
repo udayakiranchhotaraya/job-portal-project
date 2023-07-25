@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./job-search.css">
+</head>
+<body>
+    <hr>
+    <h1 id="job-banner">Start your search</h1>
+    <div class="job-form-container">
+        <!-- <h1 id="job-banner">Start your search</h1> -->
+        <br>
+        <form id="job-form">
+            <div class="job-grid">
+                <div class="job-grid-item">
+                    <div class="form-group">
+                        <span><i class="fa-solid fa-magnifying-glass fa-bounce"></i>&nbsp;&nbsp;What<input type="text" id="job-title" name="job-title" required></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="job-grid-item">
+                    <div class="form-group">
+                        <span><i class="fa-solid fa-location-dot fa-bounce"></i>&nbsp;&nbsp;Where<input type="text" id="job-location" name="job-location" required></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="job-grid-item">
+                    <div class="form-group" style="position: relative; bottom: 10%;">
+                        <button id="search-jobs">Search Jobs</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </form>
+        <br>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div id="job-list"></div>
+        <div id="job-view"></div>
+    </div>
+
+    <script src="./job-search.js"></script>
+</body>
+</html>

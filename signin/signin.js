@@ -45,7 +45,7 @@ signinForm.addEventListener('submit', () => {
             const token=Date.now();
             localStorage.setItem('token',token);
             alert("Logged in Successfully");
-            window.location.href = "../index.html";
+            window.location.href = "../jobs/job-search.html";
         }
         // if (email.value != element.value || password.value != element.password) {
             // }

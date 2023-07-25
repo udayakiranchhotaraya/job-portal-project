@@ -143,3 +143,23 @@ signupBtn.addEventListener('click', () => {
         alert("enter valid password");
     }
 })
+
+const jobSearchBtn = document.getElementById('search-job');
+jobSearchBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const searchWhat = document.getElementById('job-title').value;
+    const searchWhere = document.getElementById('job-location').value;
+
+    localStorage.setItem('searchWhat', searchWhat);
+    localStorage.setItem('searchWhere', searchWhere);
+
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        alert("You are not logged in! Login to search jobs.");
+        window.location.href = "./signin/signin.html";
+    } else {
+        window.location.href = "./jobs/job-search.html";
+    }
+})
