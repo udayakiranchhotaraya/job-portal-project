@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="./employer-dashboard.css">
+</head>
+<body>
+    <header>
+        <h2>Employes Dashboard</h2>
+    </header>
+    <div class="container">
+        <!-- Side navigation -->
+        <div class="sidenav">
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'about')" id="defaultOpen">About us</button>
+                <button class="tablinks" onclick="openTab(event, 'postedjobs')">My Posted Jobs</button>
+                <button class="tablinks" onclick="openTab(event, 'post')">Post Jobs</button>
+            </div>
+        </div>
+    
+        <!-- Page content -->
+        <div class="main">
+            <div id="about" class="tabcontent">
+                <h3>About Us</h3>
+                
+            </div>
+            
+            <div id="post" class="tabcontent" style="display: none;">
+                <h3>Post Jobs</h3>
+                
+            </div>
+            
+            <div id="postedjobs" class="tabcontent" style="display: none;">
+                <h3>My Posted Jobs</h3>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./employer-dashboard.js"></script>
+</body>
+</html>

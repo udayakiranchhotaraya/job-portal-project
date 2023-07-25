@@ -1,0 +1,81 @@
+
+* {box-sizing: border-box}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 220px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    padding-left: 1px;
+  }
+  .main {
+    
+    margin-right: 10%;
+    margin-left: 240px; /* Same as the width of the sidebar + 20px */
+  padding: 20px 30px;
+  }
+
+  .tabs-container {
+    display: flex; /* Use flexbox to align tabs and content side by side */
+  }
+
+.tab {
+  background-color: #f1f1f1;
+  width: 200px;
+  border-top: none;
+  height: 1400px;
+}
+
+
+.tab button {
+
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 1px solid #ccc;
+  }
+
+
+.tab button:hover {
+    /* background-color: #C5C5C5; */
+    background-image: #D1D1D1;
+  }
+
+
+  .tab button.active {
+    background-color: #0CAA41;
+    color: white;
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
+.tabcontent {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 220px); /* Adjusted width to account for sidebar */
+  height: 300px;
+}
+h3{
+  text-align: center;
+}
