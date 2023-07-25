@@ -43,7 +43,7 @@
                         <label for="email">Enter Password</label>
                         <input type="password" class="password" id="password-signin" name="password-signin" required>
                     </div>
-                    <span style="text-align: left; padding-left: 23px; font-size: 14px;"><input type="checkbox" class="passwordVisibilityToggler" onclick="togglePasswordVisibility()"> Show Password</span>
+                    <span style="text-align: left; padding-left: 23px; font-size: 14px;"><input type="checkbox" class="passwordVisibilityToggler" onclick="togglePasswordVisibility(event, 'password-signin')"> Show Password</span>
                     <div class="form-group">
                         <button type="button" id="sign-in-button">Sign In</button>
                     </div>
@@ -56,7 +56,7 @@
                         <label for="email">Enter Password</label>
                         <input type="password" class="password" id="password-signup" name="password-signup" required>
                     </div>
-                    <span style="text-align: left; padding-left: 23px !important; font-size: 14px;"><input type="checkbox" class="passwordVisibilityToggler" onclick="togglePasswordVisibility()"> Show Password</span>
+                    <span style="text-align: left; padding-left: 23px !important; font-size: 14px;"><input type="checkbox" class="passwordVisibilityToggler" onclick="togglePasswordVisibility(event, 'password-signup')"> Show Password</span>
                     <div class="form-group">
                         <button type="button" id="sign-up-button">Create Account</button>
                     </div>
