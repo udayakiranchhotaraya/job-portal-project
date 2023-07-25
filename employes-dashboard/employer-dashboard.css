@@ -9,7 +9,7 @@
     top: 0; /* Stay at the top */
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding-top: 87px;
     padding-left: 1px;
   }
   .main {
@@ -24,7 +24,7 @@
   }
 
 .tab {
-  background-color: #f1f1f1;
+  background-color:  #e1f7d5;
   width: 200px;
   border-top: none;
   height: 1400px;
@@ -67,7 +67,7 @@ body {
 
 header {
     text-align: center;
-    background-color: #f1f1f1;
+    background-color:  #e1f7d5;
     padding: 10px 0;
 }
 .tabcontent {
