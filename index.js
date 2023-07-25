@@ -68,8 +68,10 @@ function goToEmail() {
 
 }
 
-function togglePasswordVisibility() {
-    const passwordField = document.querySelector('.password');
+function togglePasswordVisibility(event, targetPasswordField) {
+    // const passwordField = document.querySelector('.password');
+    const passwordField = document.getElementById(targetPasswordField);
+    // const targetPasswordField = event.currentTarget.id;
     // console.log(passwordField);
     if (passwordField.type === 'password') {
         passwordField.type = 'text';
