@@ -56,16 +56,18 @@
 //     });
 // })
 
-const searchWhat = localStorage.getItem('searchWhat');
-const searchWhere = localStorage.getItem('searchWhere');
+document.body.addEventListener('load', () => {
+    const searchWhat = localStorage.getItem('searchWhat');
+    const searchWhere = localStorage.getItem('searchWhere');
 
-if (searchWhat && searchWhere) {
-    document.getElementById('job-title').value = searchWhat;
-    document.getElementById('job-location').value = searchWhere;
-    const jobList = document.getElementById('job-list');
-    jobList.innerHTML = '';
-    searchJobs(searchWhat, searchWhere);
-}
+    if (searchWhat && searchWhere) {
+        document.getElementById('job-title').value = searchWhat;
+        document.getElementById('job-location').value = searchWhere;
+        const jobList = document.getElementById('job-list');
+        jobList.innerHTML = '';
+        searchJobs(searchWhat, searchWhere);
+    }
+});
 
 const jobSearchBtn = document.getElementById('search-jobs');
 jobSearchBtn.addEventListener('click', (event) => {
@@ -129,8 +131,21 @@ function searchJobs(searchWhat, searchWhere) {
                     // console.log(jobTags);
         
                     jobTitle.innerText = element.jobTitle;
-                    employer.innerText = element.employer;
-                    employer.href = `{id}`;
+                    const employerID = element.employerID;
+                    
+                    // employer.href = `http://localhost:3000/employers/${employerID}`;
+                    fetch(`http://localhost:3000/employers/${employerID}`, {
+                        method: 'GET'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        const companyName = data.companyName;
+                        employer.innerText = companyName;
+                        employer.href = `http://localhost:3000/employers/${employerID}`;
+                    })
+
+                    // employer.innerText = employer;
+
                     jobLocation.innerText = element.jobLocation;
                     jobDescription.innerText = element.jobDescription;
                     
