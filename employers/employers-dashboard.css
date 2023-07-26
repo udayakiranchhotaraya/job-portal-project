@@ -1,6 +1,8 @@
+* {font-family: 'Lato', sans-serif;}
+
 /* The sidebar menu */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
+    height: 95vh; /* Full-height: remove this if you want "auto" height */
     width: 160px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
@@ -16,6 +18,7 @@
     margin-left: calc(160px + 10%); /* Same as the width of the sidebar */
     padding: 20px 10px 0px 0px;
     margin-right: 10%;
+    height: 95vh;
   }
   
   /* Style the tab */
@@ -24,7 +27,8 @@
     border: 1px solid black;
     background-color: white;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
+    height: 90%;
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -59,7 +63,92 @@
     float: left;
     padding: 0px 12px;
     border: 1px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 100%;
     border-left: none;
-    height: 300px;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .inline {
+    display: flex;
+    align-items: center;
+  }
+
+  #button-holder {
+    width: 15%;
+  }
+
+  #edit-company-profile, #update-company-profile {
+    height: 60%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    padding: 5%;
+    font-size: 16px;
+    transition: 500ms;
+  }
+
+  #edit-company-profile:hover, #update-company-profile:hover {
+    border-color: #0CAA41;
+    background-color: #0CAA41;
+    transition: 500ms;
+  }
+  
+  #logout-button {
+    height: 8%;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    padding: 5%;
+    margin: 3% auto;
+    font-size: 16px;
+    text-align: center;
+    transition: 500ms;
+  }
+
+  #logout-button:hover {
+    border-color: #0CAA41;
+    background-color: #0CAA41;
+    transition: 500ms;
+  }
+
+  .company-grid {
+    width: 90%;
+    /* border: 1px solid black; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2%;
+  }
+
+  .company-grid-item {
+    /* width: 10px;
+    height: 10px;
+    border: 1px solid black; */
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+  }
+
+  .input-no-border-outline {
+    border: none;
+    outline: none;
+  }
+
+  .company-grid-item input {
+    font-size: 16px;
+    /* font-family: 'Lato', sans-serif; */
+  }
+
+  .company-grid-item textarea {
+    resize: none;
+    /* font-family: 'Lato', sans-serif; */
+    font-size: 16px;
   }

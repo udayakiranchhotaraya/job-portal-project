@@ -1,8 +1,7 @@
 const emailEntered = document.getElementById('email');
 const passwordEntered = document.getElementById('password');
 
-// const signinForm = document.getElementById('signin-form');
-
+const signinForm = document.getElementById('signin-form');
 signinForm.addEventListener('submit', () => {
 
     // if (!emailEntered) {
@@ -11,31 +10,31 @@ signinForm.addEventListener('submit', () => {
         
     // }
 
-    fetch("http://localhost:3000/Employer",{
+    fetch("http://localhost:3000/employers",{
         method:'GET',
     })
     .then((result) => result.json())
     .then((data) => {
         console.log(data);
-        const user = data.find((element)=>element.email===emailEntered.value && element.password===passwordEntered.value);
+        const user = data.find((element) => element.email === emailEntered.value && element.password === passwordEntered.value);
         console.log("User:",user);
         if(user){
             const token=Date.now();
             localStorage.setItem('token',token);
+            localStorage.setItem('id', user.id);
             alert("Logged in Successfully");
-            window.location.href = "../jobs/job-search.html";
+            window.location.href = "./employers-dashboard.html";
         }
         // if (email.value != element.value || password.value != element.password) {
             // }
             else{
                 alert("Invalid credentials! Please try again.");
-                window.location.href = './signin.html';
                 //     alert("You are not a member");
                 // window.location.href='./signup.html';
             }
         }
     )
-})
+});
 
 function togglePasswordVisibility() {
     const passwordField = document.getElementById('password');
