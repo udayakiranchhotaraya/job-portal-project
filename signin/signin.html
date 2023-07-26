@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./signin.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./signin.css">
 </head>
 <body>
     <nav>
         <ul>
-            <a href="#">Employer? Sign In here&nbsp;&nbsp;<img src="../static/icons/briefcase.png" height="32px" width="32px"></a>
+            <a href="../employers/employers-signin.html">Employer? Sign In here&nbsp;&nbsp;<img></a>
         </ul>
     </nav>
     <div class="container">
@@ -26,7 +26,7 @@
                 <form method="post" id="signin-form">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="Email" required>
+                    <input type="email" id="email" name="email" required>
                     <p></p>
                 </div>
                 <div class="form-group">
@@ -34,6 +34,7 @@
                     <input type="password" id="password" name="password" required>
                     <p></p>
                 </div>
+                <span style="text-align: left; padding-left: 23px; font-size: 14px;"><input type="checkbox" id="passwordVisibilityToggler" onclick="togglePasswordVisibility()"> Show Password</span>
                 <div class="form-group">
                     <button type="submit">Continue with Email</button>
                 </div>
@@ -45,6 +46,7 @@
                 <div class="form-group">
                     <button id="signin-with-linkedin"><img>&nbsp;Continue with LinkedIn</button>
                 </div>
+                <div style="text-align: center; padding-top: 10px;">Don't have an account? <a href="../signup/signup.html">Create Account</a></div>
             </div>
         </div>
     </div>

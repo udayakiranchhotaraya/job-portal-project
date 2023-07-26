@@ -1,0 +1,26 @@
+.container{
+    width: 90%;
+    height: max-content;
+    margin: 5% auto;
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+#job-list {
+    width: 35%;
+}
+
+.job:hover {
+    cursor: pointer;
+}
+
+#job-view {
+    /* border: 1px solid black; */
+    position: sticky;
+    width: 65%;
+    /* margin-left: 34%; */
+    z-index: 1;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y:visible;
+}
