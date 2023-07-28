@@ -11,31 +11,40 @@
     <link rel="stylesheet" type="text/css" href="./employers-dashboard.css">
 </head>
 <body>
+    <div class="topnav">
+        <div style="height: 100%;"><a class="active" href="../index.html" style="font-weight: 900; font-size: x-large;">WorkConnect <sub style="font-size: x-small; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;">For Employers</sub></a></div>
+      </div>
+    <nav>
     <div class="container">
         <!-- Side navigation -->
         <div class="sidenav">
             <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'London')">London</button>
-                <button class="tablinks" onclick="openTab(event, 'Paris')">Paris</button>
-                <button class="tablinks active" onclick="openTab(event, 'company-profile')">Company Profile</button>
+                <button class="tablinks active" onclick="openTab(event, 'jobs-posted')">Jobs Posted</button>
+                <button class="tablinks" onclick="openTab(event, 'applications-received')">Applications</button>
+                <button class="tablinks" onclick="openTab(event, 'company-profile')">Company Profile</button>
                 <button id="logout-button">Logout</button>
             </div>
         </div>
     
         <!-- Page content -->
         <div class="main">
-            <div id="London" class="tabcontent"  style="display: none;">
-                <h3>London</h3>
-                <p>London is the capital city of England.</p>
+            <div id="jobs-posted" class="tabcontent">
+                <h3><span id="job-post-numbers"></span> Jobs posted.</h3>
+                <div id="job-posted-grid">
+                    <div id="create-job" style="border: 1px dashed black; border-radius: 5px; margin: 4%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        Create new job
+                    </div>
+                </div>
             </div>
             
-            <div id="Paris" class="tabcontent" style="display: none;">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p>
+            <div id="applications-received" class="tabcontent" style="display: none;">
+                <!-- <h3>Paris</h3>
+                <p>Paris is the capital of France.</p> -->
+                <i>Coming soon...</i>
             </div>
             
-            <div id="company-profile" class="tabcontent">
-                <div class="inline" style="justify-content: space-between;">
+            <div id="company-profile" class="tabcontent" style="display: none;">
+                <!-- <div class="inline" style="justify-content: space-between;">
                     <h3>Company Profile</h3>
                     <div id="button-holder" style="padding: 3%;"><button id="edit-company-profile">Edit Profile</button><button id="update-company-profile" style="display: none;">Update Profile</button></div>
                 </div>
@@ -56,9 +65,38 @@
                     <div class="company-grid-item">
                         <textarea class="input-no-border-outline" name="" id="5" readonly >Habibi</textarea>
                     </div>
-                </div>
+                </div> -->
+                <i>Coming soon...</i>
             </div>
         </div>
+    </div>
+    <div class="modal" id="new-job" style="display: none;">
+        <form action="" class="modal-form" id="new-job-form">
+            <div class="form-group">
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" name="job-title" required>
+                <p></p>
+            </div>
+            <div class="form-group">
+                <label for="job-location">Job Location</label>
+                <input type="text" id="job-location" name="job-location" required>
+                <p></p>
+            </div>
+            <div class="form-group">
+                <label for="job-description">Job Description</label>
+                <!-- <input type="text" id="job-description" name="job-description" required> -->
+                <textarea name="job-description" id="job-description" cols="88" rows="10"></textarea>
+                <p></p>
+            </div>
+            <div class="form-group">
+                <label for="salary-expected">Salary Expected</label>
+                <input type="text" id="salary-expected" name="salary-expected" required>
+                <p></p>
+            </div>
+            <div class="form-group">
+                <button type="submit">Create Job</button>
+            </div>
+        </form>
     </div>
 
     <script src="./employers-dashboard.js"></script>

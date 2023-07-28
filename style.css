@@ -206,3 +206,53 @@ body {
 .go-back-to-email:hover {
     cursor: pointer;
 }
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 100%;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    /* border-bottom: 5px solid #ddd;  */
+  }
+  
+  .topnav a.active {
+    background-color: #0CAA41;
+    color: white;
+  }
+
+  .icons{
+    margin-top: 3%;
+    margin-left: 10px;
+    border:1px solid; 
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+}
+.icon{
+    margin-left:12px;margin-top: 25px;
+}
+.icons .yt{
+    margin-left:7px
+}
+.icons .fb{
+    margin-left: 15px;
+}

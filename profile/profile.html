@@ -11,31 +11,114 @@
     <link rel="stylesheet" type="text/css" href="./profile.css">
 </head>
 <body>
+    <div class="topnav">
+        <div style="height: 100%;"><a class="active" href="../index.html" style="font-weight: 900; font-size: x-large;">WorkConnect</a></div>
+        <div style="height: 100%;">
+            <a href="../jobs/job-search.html">Search Jobs</a>
+        </div>
+        <div style="padding: 0px 2%; height: 100%;">
+            
+        </div>
+      </div>
+      
     <div class="container">
         <!-- Side navigation -->
         <div class="sidenav">
             <div class="tab">
-                <button class="tablinks active" onclick="openTab(event, 'London')">London</button>
-                <button class="tablinks" onclick="openTab(event, 'Paris')">Paris</button>
-                <button class="tablinks" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+                <button class="tablinks active" onclick="openTab(event, 'profile')">Profile</button>
+                <!-- <button class="tablinks" onclick="openTab(event, 'applications-received')">Applications</button> -->
+                <button class="tablinks" onclick="openTab(event, 'jobs-applied')">Applied Jobs</button>
+                <button id="logout-button">Logout</button>
             </div>
         </div>
     
         <!-- Page content -->
         <div class="main">
-            <div id="London" class="tabcontent">
-                <h3>London</h3>
-                <p>London is the capital city of England.</p>
+            <div id="jobs-applied" class="tabcontent"  style="display: none;">
+                <h3><span id="applied-jobs-numbers"></span> Jobs posted.</h3>
+                <div id="job-applied-grid">
+                </div>
             </div>
             
-            <div id="Paris" class="tabcontent" style="display: none;">
+            <!-- <div id="applications-received" class="tabcontent" style="display: none;">
                 <h3>Paris</h3>
                 <p>Paris is the capital of France.</p>
-            </div>
+            </div> -->
             
-            <div id="Tokyo" class="tabcontent" style="display: none;">
-                <h3>Tokyo</h3>
-                <p>Tokyo is the capital of Japan.</p>
+            <div id="profile" class="tabcontent">
+                <span id="show-details">
+                    <div class="inline" style="justify-content: space-between;">
+                        <h3>Profile</h3>
+                        <div id="button-holder" style="padding: 3%;"><button id="edit-profile">Edit Profile</button></div>
+                    </div>
+                <div class="company-grid">
+                    <div class="company-grid-item">
+                        <label for="id">USER ID: </label>
+                        <input type="text" class="input-no-border-outline" name="" id="show-id" readonly>
+                        <br>&nbsp;
+                    </div>
+                    <div class="company-grid-item">
+                        <label for="name">Name: </label>
+                        <input type="text" class="input-no-border-outline" name="" id="show-name" readonly>
+                        <br>&nbsp;
+                    </div>
+                    <div class="company-grid-item">
+                        <label for="email">Email: </label>
+                        <input type="text" class="input-no-border-outline" name="" id="show-email" readonly>
+                        <br>&nbsp;
+                    </div>
+                    <div class="company-grid-item">
+                        <label for="gender">Gender: </label>
+                        <input type="text" class="input-no-border-outline" name="" id="show-gender" readonly>
+                        <br>&nbsp;
+                    </div>
+                    <!-- <div class="company-grid-item">
+                        
+                    </div>
+                    <div class="company-grid-item">
+                        
+                    </div>
+                    <label for="about">Tell us something about youself: </label>
+                    <textarea class="input-no-border-outline" name="" id="show-about" readonly ></textarea> -->
+                </div>
+                </span>
+                <span id="edit-details" style="display: none;">
+                    <div class="inline" style="justify-content: space-between;">
+                        <h3>Profile</h3>
+                        <div id="button-holder" style="padding: 3%;"><button id="update-profile">Update Profile</button></div>
+                    </div>
+                    <div class="company-grid">
+                        <div class="company-grid-item">
+                            <label for="id">USER ID: </label>
+                            <input type="text" class="input-no-border-outline" name="" id="id" readonly>
+                            <br>&nbsp; 
+                        </div>
+                        <div class="company-grid-item">
+                            <label for="name">Name: </label>
+                            <input type="text" name="" id="name">
+                            <br>&nbsp;
+                        </div>
+                        <div class="company-grid-item">
+                            <label for="email">Email: </label>
+                            <input type="text" name="" id="email">
+                            <br>&nbsp;
+                        </div>
+                        <div class="company-grid-item">
+                            <label for="gender">Gender: </label>
+                            <input type="radio" name="gender" id="male" value="Male">Male
+                            <input type="radio" name="gender" id="female" value="Female">Female
+                            <br>&nbsp;
+                        </div>
+                        <!-- <div class="company-grid-item">
+                            
+                        </div>
+                        <div class="company-grid-item">
+                            
+                        </div>
+                        <label for="about">Tell us something about youself: </label>
+                        <textarea class="input-no-border-outline" name="" id="about" readonly ></textarea> -->
+                    </div>
+                </span>
             </div>
         </div>
     </div>

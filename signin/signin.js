@@ -44,6 +44,7 @@ signinForm.addEventListener('submit', () => {
         if(user){
             const token=Date.now();
             localStorage.setItem('token',token);
+            localStorage.setItem('user', user.id);
             alert("Logged in Successfully");
             window.location.href = "../jobs/job-search.html";
         }

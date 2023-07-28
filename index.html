@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Job Portal]</title>
+    <title>WorkConnect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -11,9 +11,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav>
-
-    </nav>
+    <div class="topnav">
+        <div style="height: 100%;"><a class="active" href="#home" style="font-weight: 900; font-size: x-large;">WorkConnect</a></div>
+        <div style="height: 100%;">
+            <a href="./employers/employers-signin.html">For Employers</a>
+        </div>
+        <div style="padding: 0px 2%; height: 100%;">
+            <a id="nav-signin-button" href="./signin/signin.html">Sign-in</a>
+            <p id="user-welcome" style="display: none; color: white;">
+                <span><a href="./profile/profile.html">My Profile</a>&nbsp;<a href="#" onclick="signout()">Signout</a></span>
+            </p>
+            <!-- <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+            </div> -->
+        </div>
+      </div>
+      
     <h1 id="banner">Level up with your work-mates!</h1>
     <div id="divider-banner"></div>
     <div id="form-container">
@@ -65,12 +83,12 @@
         </form>
     </div>
     <hr>
-    <div id="features">
+    <div id="features" >
         <br>
-        <h2>Get the head start with Job-Portal</h2>
-        <p>We are serving the perfect insights, so you have the means you need to suceed.</p>
+        <h2 style="color: #0CAA41;">Get the head start with Job-Portal</h2>
+        <p style="font-weight: 900;">We are serving the perfect insights, so you have the means you need to succeed.</p>
         <br>
-        <div class="features-grid">
+        <div class="features-grid" style="font-weight: 900;">
             <div class="features-grid-item">
                 <img src="./static/icons/icons8-job-seeker-80.png" alt=""><br>
                 Find and apply jobs
@@ -116,6 +134,59 @@
         <br>
     </div>
     <hr>
+    <div style="display: flex;margin-top: 8px;">
+        <div style="width:350px;padding-right:5%;text-align: end;margin-top: 3%;"><h1 style="color: #0CAA41;font-size:35px;">"WorkConnect"</h1></div>
+        <div style="width:180px;">
+            <div style=" font-weight:bold;margin-top: 40px;margin-bottom: 8px;">WorkConnect</div>
+            <div style="margin-bottom: 8px;">About/Press</div>
+            <div style="margin-bottom: 8px;">Awards</div>
+            <div style="margin-bottom: 8px;">Blog</div>
+            <div style="margin-bottom: 8px;">Research</div>
+            <div style="margin-bottom: 8px;">Guides</div>
+        </div>
+        <div style="width:180px;">
+            <div style=" font-weight:bold;margin-top: 40px;margin-bottom: 8px;">Employers</div>
+            <div style="margin-bottom: 8px;">Get a Free Employer Account</div>
+            <div style="margin-bottom: 8px;">Employer Center</div>
+        </div>
+        <div>
+            <div style="width:180px;">
+                <div style=" font-weight:bold;margin-top: 40px;margin-bottom: 8px;">Information</div>
+                <div style="margin-bottom: 8px;">Help / Contact Us</div>
+                <div style="margin-bottom: 8px;">Guidelines</div>
+                <div style="margin-bottom: 8px;">Terms of Use</div>
+                <div style="margin-bottom: 8px;">Privacy & Cookies</div>
+                <div style="margin-bottom: 8px;">Do Not Sell Or Share</div>
+                <div style="margin-bottom: 8px;">My Information</div>
+                <div style="margin-bottom: 8px;">Cookie Consent Tool</div>
+            </div>
+        </div>
+        <div>
+            <div style="width:180px;">
+                <div style=" font-weight:bold;margin-top: 40px;margin-bottom: 8px;">Work With Us</div>
+                <div style="margin-bottom: 8px;">Advertisers</div>
+                <div style="margin-bottom: 8px;">Careers</div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;margin-bottom: 3%;" >
+        <div style="width:350px;text-align: end;margin-top: 4%;margin-left: 3%;margin-right: 5%;">Download the App <i class="fa-brands fa-android fa-2xl" style="margin-right: 15px;"></i><i class="fa-brands fa-apple fa-2xl"></i></div>
+        <div class="icons"><i class="fa-brands fa-facebook-f fa-2xl icon fb" ></i></div>
+        <div class="icons"><i class="fa-brands fa-twitter fa-2xl icon" ></i></div>
+        <div class="icons"><i class="fa-brands fa-youtube fa-2xl icon yt"></i></div>
+        <div class="icons"><i class="fa-brands fa-instagram fa-2xl icon"></i></div>
+        <div class="icons"><i class="fa-brands fa-tiktok fa-2xl icon"></i></div>
+        <!-- <button class="dropdown">
+            <span>INDIA</span>
+            <div class="dropdown-content">
+              <p>USA</p>
+            </div>
+        </button> -->
+    </div>
+    <hr>
+    <div style="text-align: center; font-size: 14px;">
+        <p>Copyright © 2008-2023, WorkConnect, Inc. "WorkConnect" and logo are registered trademarks of Codebuster >200, Inc</p>
+    </div>
 
     <script src="./index.js"></script>
 </body>
