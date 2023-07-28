@@ -1,23 +1,29 @@
 // employers-signup.js
 
-document.getElementById('employer-form').addEventListener('submit', function(event) {
+document.getElementById('employer-signup-form').addEventListener('submit', function(event) {
     event.preventDefault();
   
     // Get form data
-    const formData = new FormData(event.target);
-    const employerData = {};
-    formData.forEach((value, key) => {
-      employerData[key] = value;
-    });
+    const hrRep = document.getElementById('name').value;
+    const companyName = document.getElementById('company').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const newEmployer = {
+      companyName: companyName,
+      email: email,
+      password: password,
+      hrRep: hrRep,
+    }
   
     // Send the data to the JSON server
-    const jsonServerURL = ''; // add the json server url
+    const jsonServerURL = 'http://localhost:3000/employers';
     fetch(jsonServerURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(employerData),
+      body: JSON.stringify(newEmployer),
     })
     .then(response => {
       if (!response.ok) {

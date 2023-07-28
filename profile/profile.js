@@ -149,3 +149,69 @@
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
+  const currentUserID = parseFloat(localStorage.getItem('user'));
+
+  fetch(`http://localhost:3000/users/${currentUserID}`, {
+        method: 'GET'
+  })
+  .then(response => response.json())
+  .then(data => {
+    // console.log(data);
+    document.getElementById('show-id').value = data.id;
+    document.getElementById('show-name').value = data.name;
+    document.getElementById('show-email').value = data.email;
+    document.getElementById('show-gender').value = data.gender;
+
+    document.getElementById('id').value = data.id;
+    document.getElementById('name').value = data.name;
+    document.getElementById('email').value = data.email;
+    // document.querySelector('input[name="gender"]:checked').value = data.gender;
+  })
+
+  const editDetailsBtn = document.getElementById('edit-profile');
+  editDetailsBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      
+      document.getElementById('show-details').style.display = 'none';
+      document.getElementById('edit-details').style.display = 'block';
+  });
+  
+  const updateDetailsBtn = document.getElementById('update-profile');
+  updateDetailsBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const userID = document.getElementById('id').value;
+      const newName = document.getElementById('name').value;
+      const newEmail = document.getElementById('email').value;
+      const newGender = document.querySelector('input[name="gender"]:checked').value;
+
+      const updatedValues = {
+        id: userID,
+        name: newName,
+        email: newEmail,
+        gender: newGender
+      }
+
+      // console.log(updatedValues);
+
+      fetch(`http://localhost:3000/users/${userID}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedValues)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data));
+  
+      document.getElementById('edit-details').style.display = 'none';
+      document.getElementById('show-details').style.display = 'block';
+  });
+
+  const logoutBtn = document.getElementById('logout-button');
+  logoutBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      localStorage.clear();
+      window.location.href = "../index.html";
+  });

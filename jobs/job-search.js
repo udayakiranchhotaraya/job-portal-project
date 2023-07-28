@@ -156,8 +156,31 @@ function searchJobs(searchWhat, searchWhere) {
                     job.style.padding = "2%";
                     job.style.borderRadius = "5px";
 
+                    const currentUserID = parseFloat(localStorage.getItem('user'));
+                    newApplicantIds = element.applicantIds.concat(currentUserID);
+                    console.log(newApplicantIds);
+
+                    const jobID = element.id;
                     applyBtn.innerHTML = "Apply";
-                    // applyBtn.addEventListener()
+                    applyBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        // console.log(jobID);
+
+                        console.log(newApplicantIds);
+                        fetch(`http://localhost:3000/jobs/${jobID}`, {
+                            method: 'PATCH',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                applicantIds: newApplicantIds
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('you have successfully applied!');
+                        });
+                    })
         
                     job.append(jobTitle, employer, jobTagsDiv, jobLocation, jobDescription, applyBtn);
                     jobViewLarge.appendChild(job);
@@ -181,4 +204,18 @@ function searchJobs(searchWhat, searchWhere) {
             })
         }
     })
+}
+
+const user = localStorage.getItem('user');
+if (user) {
+    const welcomeUser = document.getElementById('user-welcome');
+    welcomeUser.style.display = 'block';
+    const signinBtnNav = document.getElementById('nav-signin-button');
+    signinBtnNav.style.display = 'none';
+    document.getElementById('user-name').innerHTML = user;
+}
+
+function signout() {
+    localStorage.clear();
+    window.location.href = "../index.html";
 }

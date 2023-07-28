@@ -104,14 +104,15 @@ function signin(emailEntered, passwordEntered) {
         if(user){
             const token=Date.now();
             localStorage.setItem('token',token);
+            localStorage.setItem('user', user.id);
             alert("Logged in Successfully");
-            window.location.href = "../index.html";
+            window.location.href = "../jobs/job-search.html";
         }
         // if (email.value != element.value || password.value != element.password) {
             // }
             else{
                 alert("Invalid credentials! Please try again.");
-                window.location.href = './signin.html';
+                window.location.href = './signin/signin.html';
                 //     alert("You are not a member");
                 // window.location.href='./signup.html';
             }
@@ -165,3 +166,17 @@ jobSearchBtn.addEventListener('click', (event) => {
         window.location.href = "./jobs/job-search.html";
     }
 })
+
+const user = localStorage.getItem('user');
+if (user) {
+    const welcomeUser = document.getElementById('user-welcome');
+    welcomeUser.style.display = 'block';
+    const signinBtnNav = document.getElementById('nav-signin-button');
+    signinBtnNav.style.display = 'none';
+    document.getElementById('user-name').innerHTML = user;
+}
+
+function signout() {
+    localStorage.clear();
+    window.location.href = "./index.html";
+}
