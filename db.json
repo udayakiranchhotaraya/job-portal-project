@@ -26,6 +26,34 @@
       "email": "jason@mail.com",
       "password": "jason.pwd",
       "id": 5
+    },
+    {
+      "email": "maxx@mail.com",
+      "password": "max.pwd",
+      "id": 6,
+      "name": "Max",
+      "gender": "Male"
+    },
+    {
+      "email": "lewis@mail.com",
+      "password": "lewis.pwd",
+      "id": 7,
+      "name": "Lewis Hamilton",
+      "gender": "Male"
+    },
+    {
+      "email": "seb.vettel@mail.com",
+      "password": "seb.pwd",
+      "id": 8,
+      "name": "Sebastian Vettel",
+      "gender": "Male"
+    },
+    {
+      "email": "checo@mail.com",
+      "password": "checo.pwd",
+      "id": 9,
+      "name": "Sergio Perez",
+      "gender": "Male"
     }
   ],
   "employers": [
@@ -42,6 +70,13 @@
       "password": "pixe.pwd",
       "hrRep": "Asutosh",
       "id": 2
+    },
+    {
+      "companyName": "Codebusters",
+      "email": "manoj@codebusters.com",
+      "password": "manoj.pwd",
+      "hrRep": "Manoj",
+      "id": 3
     }
   ],
   "jobs": [
@@ -59,7 +94,8 @@
       ],
       "applicantIds": [
         1,
-        2
+        2,
+        6
       ]
     },
     {
@@ -80,13 +116,22 @@
       ]
     },
     {
-      "jobTitle": "Content Writer",
-      "jobDescription": "Location: Remote – Work in your own environment\nHours: Contracted / Freelance\nCompensation: Based on industry experience\n\nWe are hiring content writers who can help us populate our social media blog. You’ll be writing about YouTube, Music, Short & long-form video (i.e TikTok, Instagram, YouTube).\n\nThis will start off as a few articles to test the waters, this can develop into a larger project once we find the right candidate. You’ll be provided with outlines including headings to help guide the writing and you’ll be able to contact us at any time regarding questions you may have relating to the subjects.\n\nDaily Duties\n\nCreate original textual content for the GMG social media blog\nPreferred Qualification and Skill\n\nAn urgency and ability to meet short/fast-paced deadlines\nProven at least 1-year writing experience in the social media industry\nA focus on listening, learning, and improving\nA positive, problem-solving attitude, and a willingness to use all available technological tools to aid\nOrganizational and time management skills, ability to prioritize and plan effectively\nExcellent skills and knowledge of writing the English language\nStrong research abilities\nExcellent creative and improvisational abilities\nStrong multitasking skills; being organized enough to handle writing on multiple platforms",
-      "employerID": 1,
-      "jobLocation": "Remote",
-      "salaryExpected": "₹8,000 - ₹10,000 per month",
+      "jobTitle": "Customer Support Voice & Non Voice",
+      "jobDescription": "Urgent Requirement Customer Support Officer Customer Support Customer Care Customer Services Customer Service Executive Voice & Non Voice Process Work from office\n\nSkills Should have excellent communication skills- English\nExcellent verbal and written communication skills\nAbility to work effectively in a team environment Pleasant, professional, and courteous personality skills\nThe job will require you to handle inbound calls/emails/chats regarding Customer queries.\nResolve customer queries and achieve customer delight.\nAbility to Identify Opportunity and Implement Process Improvements\nHas technical experience and skills in the areas of problem determination, creativity, and analysis.\n\nCall/WhatsAp8750141536HRManager\n\nProfile: - Technical Support/Customer Support Banking Profile /Laptop/Desktop Support IT Help Disk/Insurance/Sales/Mortgage/\n\nJob Types: Full-time, Regular / Permanent\n\nSalary: ₹22,607.95 - ₹34,055.89 per month\n\nBenefits:\n\nHealth insurance\nInternet reimbursement\nLife insurance\nPaid time off\nProvident Fund\nWork from home\nSchedule:\n\nDay shift\nEvening shift\nFixed shift\nMonday to Friday\nMorning shift\nNight shift\nRotational shift\nUK shift\nUS shift\nWeekend availability\nWeekend only\nSupplemental pay types:\n\nCommission pay\nJoining bonus\nOvertime pay\nPerformance bonus\nQuarterly bonus\nShift allowance\nYearly bonus\nAbility to commute/relocate:\n\nJaipur, Rajasthan: Reliably commute or planning to relocate before starting work (Required)\nEducation:\n\nHigher Secondary(12th Pass) (Preferred)\nExperience:\n\ntotal work: 1 year (Required)\nCustomer service: 1 year (Required)\nLanguage:\n\nEnglish (Preferred)",
+      "employerID": 2,
+      "jobLocation": "Mohali, Punjab • Remote",
+      "salaryExpected": "₹22,608 - ₹34,056 a month",
       "applicantIds": [],
-      "id": 3
+      "id": 4
+    },
+    {
+      "jobTitle": "Web and Graphic Designer",
+      "jobDescription": "Key Skills:\nCandidates must have at least 2 Yrs. experience of Photoshop,Dreamweaver, jquery, HTML5 & CSS.\nShould be a mockup and graphic design expert, with expertise in Photoshop, illustrator, indesign and corel draw.\nShould have a strong sense of visual design, with an eye for simple-to-use interfaces.\nMust have strong work experience in HTML5 & CSS to design responsive websites.",
+      "employerID": 1,
+      "jobLocation": "Bhubaneshwar, Orissa",
+      "salaryExpected": "Rs. 10,000 - Rs. 12,000 per month",
+      "applicantIds": [],
+      "id": 5
     }
   ]
 }
