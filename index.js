@@ -141,6 +141,11 @@ signupBtn.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             console.log("New User: ", newUser);
+            const token=Date.now();
+            localStorage.setItem('token',token);
+            // localStorage.setItem('user', user.id);
+            alert("Profile created successfully!");
+            window.location.href = "./profile/profile.html";
         })
     } else {
         alert("enter valid password");

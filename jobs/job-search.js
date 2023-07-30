@@ -56,7 +56,7 @@
 //     });
 // })
 
-document.body.addEventListener('load', () => {
+// document.body.addEventListener('load', () => {
     const searchWhat = localStorage.getItem('searchWhat');
     const searchWhere = localStorage.getItem('searchWhere');
 
@@ -67,7 +67,7 @@ document.body.addEventListener('load', () => {
         jobList.innerHTML = '';
         searchJobs(searchWhat, searchWhere);
     }
-});
+// });
 
 const jobSearchBtn = document.getElementById('search-jobs');
 jobSearchBtn.addEventListener('click', (event) => {
